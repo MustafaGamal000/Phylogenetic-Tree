@@ -1,5 +1,6 @@
 matrix = [[0 for i in range(6)] for j in range(6)]
 label = ['A', 'B', 'C', 'D', 'E' , 'F']
+
 def _IntializeMatrix(seq1, seq2, index1, index2):
     global matrix
     diff = 0

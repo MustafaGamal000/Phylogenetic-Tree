@@ -1,5 +1,3 @@
-#import numpy as np
-#matrix = np.zeros((6,6))
 matrix = [[0 for i in range(6)] for j in range(6)]
 label = ['A', 'B', 'C', 'D', 'E' , 'F']
 def _IntializeMatrix(seq1, seq2, index1, index2):
@@ -32,7 +30,6 @@ def findLowestCell():
 
 def creatNewMatrix(x, y):
     global matrix
-    #hight, width = matrix.shape
     row =[]
     avg = -1
     for i in range (len(matrix)):
@@ -42,11 +39,6 @@ def creatNewMatrix(x, y):
             avg = (matrix[x][i] + matrix[y][i]) / 2
             row.append(avg)
             
-    """matrix = np.delete(matrix, x, 0)
-    matrix = np.delete(matrix, y-1, 0)
-    matrix = np.delete(matrix, y, 1)
-    matrix = np.insert(matrix, x, row)
-    matrix = np.reshape(matrix, (hight-1, width-1))"""
     for j in matrix: 
         del j[y]
     del matrix[x]
